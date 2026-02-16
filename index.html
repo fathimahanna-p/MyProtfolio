@@ -125,7 +125,7 @@ If you have an idea, I’d love to build it into something real.</p>
         <div class="services-container">
             <div class="services-box">
                 <div class="services-info">
-                    <i class="bx bxl-figma"></i>
+                    <i class='bx bx-code-alt'></i>
                     <h4>Static Website Development</h4>
                     <p>Responsive static websites built with HTML, CSS, and JavaScript.</p>
                 </div>
@@ -133,21 +133,35 @@ If you have an idea, I’d love to build it into something real.</p>
 
             <div class="services-box">
                 <div class="services-info">
-                    <i class="bx bx-code"></i>
-                    <h4>Frontend Development</h4>
-                    <p>I build responsive, interactive websites with neat code and modern tools. I pay attention to layout, speed, animations, and overall usability, turning ideas into fast, polished, and user-friendly websites.</p>
+                    <i class='bx bx-devices'></i>
+                    <h4>Responsive Website Design</h4>
+                    <p>Mobile-first, responsive layouts that work smoothly on all devices.</p>
                 </div>
             </div>
 
-                 <div class="services-box">
+            <div class="services-box">
                 <div class="services-info">
-                    <i class="bx bxs-wrench"></i>
-                    <h4>Backend Developer</h4>
-                    <p>Aspiring Backend Developer learning to design and build efficient server-side systems, databases, and APIs using Python and Django...</p>
+                    <i class='bx bx-paint'></i>
+                    <h4>Website Redesign / UI Improvement</h4>
+                    <p>Redesigning existing websites to improve clarity, layout, and user experience.</p>
                 </div>
             </div>
 
-            
+            <div class="services-box">
+                <div class="services-info">
+                    <i class='bx bx-rocket'></i>
+                    <h4>Landing Page Creation</h4>
+                    <p>High-converting landing pages for products, services, or campaigns.</p>
+                </div>
+            </div>
+
+            <div class="services-box">
+                <div class="services-info">
+                    <i class='bx bx-cloud-upload'></i>
+                    <h4>Website Setup & Deployment Support</h4>
+                    <p>Website setup, deployment, and basic hosting support.</p>
+                </div>
+            </div>
         </div>
     </section>
 
@@ -182,26 +196,23 @@ If you have an idea, I’d love to build it into something real.</p>
     <section class="contact" id="contact">
         <h4 class="heading">Contact <span> Me</span></h4>
 
-        <form action="#">
-
+        <form action="https://formspree.io/f/YOUR_FORM_ID" method="POST" id="contact-form">
             <div class="input-grp">
                 <div class="input-box">
-                    <input type="text" placeholder="Full Name">
-                    <input type="email" placeholder="Email">
+                    <input type="text" name="name" placeholder="Full Name" required>
+                    <input type="email" name="email" placeholder="Email" required>
                 </div>
                 <div class="input-box">
-                    <input type="number" placeholder="Phone Number">
-                    <input type="text" placeholder="Subject">
+                    <input type="number" name="phone" placeholder="Phone Number">
+                    <input type="text" name="subject" placeholder="Subject" required>
                 </div>
             </div>
 
             <div class="input-grp-2">
-                <textarea name="" id="" placeholder="Your Message" cols="30" rows="15"></textarea>
+                <textarea name="message" id="" placeholder="Your Message" cols="30" rows="15" required></textarea>
                 <input type="submit" value="Send Message" class="btn">
-
-            </div>    
-
-
+            </div>
+            <p id="form-status"></p>
         </form>
     </section>
 
