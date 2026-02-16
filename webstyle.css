@@ -395,7 +395,7 @@ section {
     padding: 4rem;
     border-radius: 2rem;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    border: 1px solid #30363d;
+    border: 1px solid #2c3238;
 }
 
 .contact .input-group {
@@ -423,7 +423,7 @@ section {
     padding: 1.5rem;
     font-size: 1.6rem;
     color: #c9d1d9;
-    background-color: #0d1117;
+    background-color: #000000;
     /* Very dark input bg */
     border-radius: 1rem;
     border: 1px solid #30363d;
@@ -447,7 +447,7 @@ section {
     align-self: flex-start;
     /* Align button to start */
     margin-top: 1rem;
-    background: linear-gradient(90deg, #ff7e5f, #feb47b);
+    background: linear-gradient(90deg, #0f0668, #5d4fdb);
     /* Orange gradient */
     color: white;
     border: none;
@@ -456,12 +456,12 @@ section {
     cursor: pointer;
     font-weight: 600;
     transition: transform 0.2s;
-    box-shadow: 0 4px 15px rgba(255, 126, 95, 0.4);
+    box-shadow: 0 4px 15px #6b38ed(255, 126, 95, 0.6);
 }
 
 .contact form .btn:hover {
     transform: scale(1.02);
-    box-shadow: 0 6px 20px rgba(255, 126, 95, 0.6);
+    box-shadow: 0 0 25px #6b38ed(255, 126, 95, 0.6);
 }
 
 .contact form input::placeholder,
