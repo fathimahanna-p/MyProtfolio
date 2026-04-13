@@ -352,8 +352,8 @@ section {
 
 .project-box {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    place-items: center;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    align-items: stretch;
     gap: 3rem;
     row-gap: 5rem;
 }
@@ -362,19 +362,21 @@ section {
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
+    justify-content: flex-start;
     text-align: center;
     background-color: var(--main-color);
     border: 2px solid #6b38ed;
     border-radius: 3rem;
     gap: 2rem;
-    padding: 5rem 2rem;
+    padding: 3rem 2rem;
     overflow: hidden;
     cursor: pointer;
     color: #fafafa;
     font-size: 1.5rem;
     font-weight: bold;
     transition: 0.4s ease-in-out;
+    width: 100%;
+    height: 100%;
 }
 
 .project-card:hover {
@@ -386,8 +388,27 @@ section {
 }
 
 .project-card img {
-    max-width: 300px;
-    border-radius: 3rem;
+    width: 100%;
+    aspect-ratio: 16 / 10;
+    object-fit: cover;
+    border-radius: 2rem;
+}
+
+.project-card p {
+    flex-grow: 1;
+    line-height: 1.6;
+}
+
+.project-actions {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1.5rem;
+    margin-top: auto;
+}
+
+.project-actions a {
+    display: inline-flex;
 }
 
 .contact h2 {
@@ -548,6 +569,7 @@ input[type=number]::-webkit-outer-spin-button {
     }
 
     .project-box {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
         padding: 0 2rem;
     }
 
@@ -653,6 +675,10 @@ input[type=number]::-webkit-outer-spin-button {
     .contact form {
         width: 100%;
         padding: 2rem;
+    }
+
+    .project-box {
+        grid-template-columns: 1fr;
     }
 }
 
