@@ -38,10 +38,22 @@ body {
     z-index: 1000;
 }
 
-#menu-icon {
-    font-size: 3.5rem;
-    color: var(--main-color);
+.menu-toggle {
     display: none;
+    align-items: center;
+    justify-content: center;
+    width: 4.4rem;
+    height: 4.4rem;
+    border: 1px solid rgba(107, 56, 237, 0.45);
+    border-radius: 0.8rem;
+    background: rgba(8, 8, 8, 0.55);
+    color: var(--text-color);
+    cursor: pointer;
+}
+
+.menu-toggle i {
+    font-size: 3.2rem;
+    line-height: 1;
 }
 
 .logo {
@@ -583,8 +595,17 @@ input[type=number]::-webkit-outer-spin-button {
 }
 
 @media(max-width:768px) {
-    #menu-icon {
-        display: block;
+    .header {
+        padding: 1.5rem 4%;
+    }
+
+    .menu-toggle {
+        display: inline-flex;
+        order: 3;
+    }
+
+    .gradient-btn {
+        display: none;
     }
 
     .navbar {
@@ -592,10 +613,10 @@ input[type=number]::-webkit-outer-spin-button {
         top: 100%;
         left: 0;
         width: 100%;
-        padding: 1rem 3%;
-        background: var(--main-color);
-        border-top: .1rem solid rgba(0, 0, 0, .2);
-        box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .2);
+        padding: 1.6rem 4% 2rem;
+        background: rgba(8, 8, 8, 0.96);
+        border-top: .1rem solid rgba(107, 56, 237, 0.35);
+        box-shadow: 0 .8rem 2rem rgba(0, 0, 0, .35);
         display: none;
     }
 
@@ -606,15 +627,16 @@ input[type=number]::-webkit-outer-spin-button {
     .navbar a {
         display: block;
         font-size: 2rem;
-        margin: 3rem 0;
-        transform: translateY(-50px);
-        opacity: 0;
-        animation: slideTop .5s ease forwards;
+        margin: 0;
+        padding: 1.4rem 0;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+        transform: translateY(0);
+        opacity: 1;
+        animation: none;
     }
 
-    .navbar.active a {
-        /* basic reveal for links */
-        animation-delay: calc(.1s * var(--i));
+    .navbar a:last-child {
+        border-bottom: 0;
     }
 
     .home {

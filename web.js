@@ -1,27 +1,48 @@
-let menuIcon = document.querySelector('#menu-icon');
-let navbar = document.querySelector('.navbar');
+const menuIcon = document.querySelector('#menu-icon');
+const menuIconGraphic = menuIcon?.querySelector('i');
+const navbar = document.querySelector('.navbar');
 
-menuIcon.onclick = () => {
-    menuIcon.classList.toggle('bx-x')
-    navbar.classList.toggle('active');
+if (menuIcon && navbar) {
+    menuIcon.addEventListener('click', () => {
+        const isOpen = navbar.classList.toggle('active');
+        menuIconGraphic.classList.toggle('bx-menu', !isOpen);
+        menuIconGraphic.classList.toggle('bx-x', isOpen);
+        menuIcon.setAttribute('aria-expanded', String(isOpen));
+        menuIcon.setAttribute('aria-label', isOpen ? 'Close menu' : 'Open menu');
+    });
+
+    navbar.querySelectorAll('a').forEach((link) => {
+        link.addEventListener('click', () => {
+            navbar.classList.remove('active');
+            menuIconGraphic.classList.add('bx-menu');
+            menuIconGraphic.classList.remove('bx-x');
+            menuIcon.setAttribute('aria-expanded', 'false');
+            menuIcon.setAttribute('aria-label', 'Open menu');
+        });
+    });
+
+    window.addEventListener('scroll', () => {
+        navbar.classList.remove('active');
+        menuIconGraphic.classList.add('bx-menu');
+        menuIconGraphic.classList.remove('bx-x');
+        menuIcon.setAttribute('aria-expanded', 'false');
+        menuIcon.setAttribute('aria-label', 'Open menu');
+    });
 }
 
-window.onscroll = () => {
-    menuIcon.classList.remove('bx-x');
-    navbar.classList.remove('active');
+if (typeof ScrollReveal === 'function') {
+    ScrollReveal({
+        reset: true,
+        distance: '80px',
+        duration: 2000,
+        delay: 200
+    });
+
+    ScrollReveal().reveal('.home-content, .heading', { origin: 'top' });
+    ScrollReveal().reveal('.home-img, .services-container, .project-box, .contact form', { origin: 'bottom' });
+    ScrollReveal().reveal('.home-content h1, .abt-img', { origin: 'left' });
+    ScrollReveal().reveal('.home-content p, .abt-content', { origin: 'right' });
 }
-
-ScrollReveal({
-    reset: true,
-    distance: '80px',
-    duration: 2000,
-    delay: 200
-});
-
-ScrollReveal().reveal('.home-content, .heading', { origin: 'top' });
-ScrollReveal().reveal('.home-img, .services-container, .project-box, .contact form', { origin: 'bottom' });
-ScrollReveal().reveal('.home-content h1, .abt-img', { origin: 'left' });
-ScrollReveal().reveal('.home-content p, .abt-content', { origin: 'right' });
 
 const form = document.getElementById('contact-form');
 const formStatus = document.getElementById('form-status');
