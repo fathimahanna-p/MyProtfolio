@@ -168,41 +168,70 @@ If you have an idea, I’d love to build it into something real.</p>
     </section>
 
     <section class="contact" id="contact">
-        <h4 class="heading">Contact <span> Me</span></h4>
+    <h4 class="heading">Contact <span>Me</span></h4>
 
-        <form action="https://formspree.io/f/xvzbrobw" method="POST" id="contact-form">
-            <div class="input-group">
-                <label for="name">Name</label>
-                <div class="input-box">
-                    <input type="text" name="name" id="name" placeholder="John Doe" required>
-                </div>
+    <form action="https://formspree.io/f/xdajwbyd" method="POST" id="contact-form">
+
+        <!-- Email Subject -->
+        <input type="hidden" name="_subject" value="New Portfolio Contact Message">
+
+        <div class="input-group">
+            <label for="name">Name</label>
+            <div class="input-box">
+                <input 
+                    type="text" 
+                    name="name" 
+                    id="name" 
+                    placeholder="John Doe" 
+                    required
+                >
             </div>
+        </div>
 
-            <div class="input-group">
-                <label for="email">Email</label>
-                <div class="input-box">
-                    <input type="email" name="email" id="email" placeholder="john@example.com" required>
-                </div>
+        <div class="input-group">
+            <label for="email">Email</label>
+            <div class="input-box">
+                <input 
+                    type="email" 
+                    name="email" 
+                    id="email" 
+                    placeholder="john@example.com" 
+                    required
+                >
             </div>
+        </div>
 
-            <div class="input-group">
-                <label for="number">Phone no</label>
-                <div class="input-box">
-                    <input type="tel" name="phone" placeholder="Phone number" inputmode="numeric">
-                </div>
+        <div class="input-group">
+            <label for="phone">Phone no</label>
+            <div class="input-box">
+                <input 
+                    type="tel" 
+                    name="phone" 
+                    id="phone"
+                    placeholder="Phone number"
+                    inputmode="numeric"
+                >
             </div>
+        </div>
 
-            <div class="input-group">
-                <label for="message">Message</label>
-                <div class="input-box textarea-box">
-                    <textarea name="message" id="message" placeholder="How can I help you?" cols="30" rows="10" required></textarea>
-                </div>
+        <div class="input-group">
+            <label for="message">Message</label>
+            <div class="input-box textarea-box">
+                <textarea 
+                    name="message" 
+                    id="message" 
+                    placeholder="How can I help you?" 
+                    cols="30" 
+                    rows="10" 
+                    required
+                ></textarea>
             </div>
+        </div>
 
-            <input type="submit" value="Send Message" class="btn">
-            <p id="form-status"></p>
-        </form>
-    </section>
+        <input type="submit" value="Send Message" class="btn">
+
+    </form>
+</section>
 
     <footer class="footer">
             <div class="social-icon">
